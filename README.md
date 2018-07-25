@@ -16,7 +16,7 @@
 
 # Steps
 
-## Run Node.js notebooks in Watson Studio
+## Run in Watson Studio
 ***
 
 # Links
