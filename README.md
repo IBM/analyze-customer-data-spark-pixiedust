@@ -1,23 +1,70 @@
 # Analyze customer data using Jupyter notebooks, Apache Spark, and PixieDust
 
+In this code pattern historical shopping data is analyzed with Spark and PixieDust. The data is loaded, cleaned and then analyzed by creating various charts and maps. 
+
+When you have completed this code patterns, you will understand how to:
+
+* Use [Jupyter Notebooks](http://jupyter.org/) in [IBM Watson Studio](https://dataplatform.ibm.com/)
+* Load data with PixieDust and clean data with Spark
+* Create charts and maps with [PixieDust](https://github.com/pixiedust/pixiedust)
+
+The intended audience is anyone interested in quickly analyzing data in a Jupyter notebook.
+
 ## Flow
 
-1. 
-2. 
-3. 
+1. Log in to IBM Watson Studio
+1. Load the provided notebook into Watson Studio
+1. Load and transform the customer data in the notebook
+1. Create charts and maps 
 
 ## Included Components
-* [Watson Studio](https://datascience.ibm.com): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
-* [Jupyter Notebook](http://jupyter.org/): An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
-* [PixieDust](https://github.com/pixiedust/pixiedust): Provides a Python helper library for IPython Notebook.
+* [IBM Watson Studio](https://console.bluemix.net/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
+* [IBM Apache Spark](https://console.ng.bluemix.net/catalog/services/apache-spark): an open source cluster computing framework optimized for extremely fast and large scale data processing
 
 ## Featured Technologies
-* [pixiedust](https://github.com/pixieudst/pixiedust): Open source Python package, providing support for Javascript/Node.js code.
+* [Jupyter notebooks](http://jupyter.org/): an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text
+* [PixieDust](https://github.com/pixiedust/pixiedust): Open source Python package, providing support for Javascript/Node.js code.
 
 # Steps
 
-## Run in Watson Studio
-***
+1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
+1. [Create a project](#2-create-a-project)
+1. [Create a notebook](#3-create-the-notebook)
+1. [Load customer data in the notebook](#4-load-customer-data)
+
+## 1. Sign up for Watson Studio
+
+Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account.
+
+## 2. Create a project and add the Spark services
+
+* Create a new project by clicking on the tile as below. Choose `Complete` and click `OK`. 
+ 
+![](doc/source/images/new_project.png)
+ 
+* Give your Project a name.
+* Select an Object Storage from the drop-down menu or create a new one for free. This is used to store the notebooks and data. Do not forget to click refresh when returning to the Project page.
+* click `Create`.  
+ 
+* Associate the project with an Apache Spark service instance. Go to the `Settings` tab at the top of the Project page, and then scroll down to Associated Services. Click + and select Spark from the drop-down menu. Select an existing service or create a new one for free.
+ 
+![spark](doc/source/images/add_spark.png)
+
+## 3. Create a notebook
+
+* Add a new notebook. Go to the `Assets` tab at the top of the Project page. Scroll down to `Notebooks` and click +. Choose new notebook `From URL`. Give your notebook a name and copy this URL: 
+https://raw.githubusercontent.com/IBM/analyze-customer-data-spark-pixiedust/master/notebooks/analyze-customer-data.ipynb
+* Make sure you select Spark as your runtime and click `Create Notebook`.
+ 
+![notebook](doc/source/images/new_notebook.png)
+ 
+* The notebook will load. 
+ 
+## 4. Load customer data in the notebook
+
+* Run the cells one at a time. Select the cell, and then press the `Play` button in the toolbar.
+* Make sure the latest version on PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
+* Load the data into the notebook and view the data in a table with `display()`.
 
 # Links
 * [pixiedust](https://github.com/pixiedust/pixiedust) Python helper library for Python notebooks
