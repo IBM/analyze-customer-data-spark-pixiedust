@@ -66,8 +66,12 @@ https://raw.githubusercontent.com/IBM/analyze-customer-data-spark-pixiedust/mast
 * Make sure the latest version on PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
 * Load the data into the notebook and view the data in a table with `display()`.
 
-# Links
-* [pixiedust](https://github.com/pixiedust/pixiedust) Python helper library for Python notebooks
+# Related links
+[Build a recommender with Apache Spark and Elasticsearch](https://developer.ibm.com/code/patterns/build-a-recommender-with-apache-spark-and-elasticsearch/)
+
+[Create a web-based mobile health app using Watson services on IBM Cloud and IBM Watson Studio](https://developer.ibm.com/code/patterns/develop-web-based-mobile-health-app-uses-machine-learning/)
+
+[Use machine learning to predict U.S. opioid prescribers with Watson Studio and scikit-learn](https://developer.ibm.com/code/patterns/analyze-open-medical-data-sets-to-gain-insights/)
 
 # Learn more
 * **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://datascience.ibm.com/)
