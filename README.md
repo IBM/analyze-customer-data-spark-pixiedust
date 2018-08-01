@@ -12,10 +12,13 @@ The intended audience is anyone interested in quickly analyzing data in a Jupyte
 
 ## Flow
 
+![](doc/source/images/flow_diagram.png)
+
 1. Log in to IBM Watson Studio
 1. Load the provided notebook into Watson Studio
-1. Load and transform the customer data in the notebook
-1. Create charts and maps 
+1. Load the customer data in the notebook
+1. Transform the data with Apacke Spark
+1. Create charts and maps with PixieDust
 
 ## Included Components
 * [IBM Watson Studio](https://console.bluemix.net/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
@@ -31,6 +34,8 @@ The intended audience is anyone interested in quickly analyzing data in a Jupyte
 1. [Create a project](#2-create-a-project)
 1. [Create a notebook](#3-create-the-notebook)
 1. [Load customer data in the notebook](#4-load-customer-data)
+1. [Transform the data with Apache Spark](#5-transform-data)
+1. [Create charts and maps with PixieDust](#6-create-charts)
 
 ## 1. Sign up for Watson Studio
 
@@ -64,7 +69,35 @@ https://raw.githubusercontent.com/IBM/analyze-customer-data-spark-pixiedust/mast
 
 * Run the cells one at a time. Select the cell, and then press the `Play` button in the toolbar.
 * Make sure the latest version on PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
-* Load the data into the notebook and view the data in a table with `display()`.
+* Load the data into the notebook.
+
+## 5. Transform the data with Apache Spark
+
+Before analyzing the data, it needs to be cleaned and formatted. This can be done with a few [pyspark](https://spark.apache.org/docs/latest/api/python/index.html) commands:
+
+* Select only the columns you are interested in with `df.select()`
+* Convert the AGE column to a numeric data type so you can run calculations on customer age with a user defined function ([udf](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=udf#pyspark.sql.functions.udf)).
+* Derive the gender information for each customer based on the salutation and rename the GenderCode column to GENDER with a second `udf`.
+
+## 6. Create charts and maps with PixieDust
+
+The data can now be explored with PixieDust:
+
+* With `display()` explore the data in a table.
+
+* Then click on the below button to create one of the charts in the list.
+
+![notebook](doc/source/images/display.png)
+
+* Drag and drop the variables you want to display into the `Keys` and `Values` fields. Select the aggregation from the drop-down menu and click `OK`.
+
+* From the menu on the right of the chart you can select which renderer you want to use, where each one of them visualises the data slightly different. Other options are clustering by a variable, the size and orientation of the chart and the display of a legend. 
+
+* Below are two examples of a bar chart and a map created in the notebook.
+
+![notebook](doc/source/images/chart_histogram.png)
+![notebook](doc/source/images/chart_map.png)
+
 
 # Related links
 [Build a recommender with Apache Spark and Elasticsearch](https://developer.ibm.com/code/patterns/build-a-recommender-with-apache-spark-and-elasticsearch/)
