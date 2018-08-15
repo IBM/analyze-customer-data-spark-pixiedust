@@ -68,7 +68,7 @@ https://raw.githubusercontent.com/IBM/analyze-customer-data-spark-pixiedust/mast
 ## 4. Load customer data in the notebook
 
 * Run the cells one at a time. Select the cell, and then press the `Play` button in the toolbar.
-* Make sure the latest version on PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
+* Make sure the latest version of PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
 * Load the data into the notebook.
 
 ## 5. Transform the data with Apache Spark
@@ -91,7 +91,7 @@ The data can now be explored with PixieDust:
 
 * Drag and drop the variables you want to display into the `Keys` and `Values` fields. Select the aggregation from the drop-down menu and click `OK`.
 
-* From the menu on the right of the chart you can select which renderer you want to use, where each one of them visualises the data slightly different. Other options are clustering by a variable, the size and orientation of the chart and the display of a legend. 
+* From the menu on the right of the chart you can select which renderer you want to use, where each one of them visualises the data in a different way. Other options are clustering by a variable, the size and orientation of the chart and the display of a legend. 
 
 * Below are two examples of a bar chart and a map created in the notebook.
 
