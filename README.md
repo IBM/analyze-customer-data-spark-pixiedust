@@ -17,7 +17,7 @@ The intended audience is anyone interested in quickly analyzing data in a Jupyte
 1. Log in to IBM Watson Studio
 1. Load the provided notebook into Watson Studio
 1. Load the customer data in the notebook
-1. Transform the data with Apacke Spark
+1. Transform the data with Apache Spark
 1. Create charts and maps with PixieDust
 
 ## Included Components
