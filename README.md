@@ -20,9 +20,14 @@ The intended audience is anyone interested in quickly analyzing data in a Jupyte
 1. Transform the data with Apache Spark
 1. Create charts and maps with PixieDust
 
+#### About the data
+
+* [x19_income_select.csv](data/x19_income_select.csv): Household income statistics for many categories of income, including wages, interest, social security, public assistance, and retirement. Compiled at the zip code geography level by the United States Census Bureau. Available as a data set on [Watson Studio](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/beb8c30a3f559e58716d983671b70337)
+* [customers_orders1_opt.csv](data/customers_orders1_opt.csv): Fictitious customer demographics and sales data. Published by IBM. Available as a data set on [Watson Studio](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/f8ccaf607372882403a37d9019b3abf4)
+
 ## Included Components
 
-* [IBM Watson Studio](https://console.bluemix.net/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
+* [IBM Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
 * [PixieDust](https://github.com/pixiedust/pixiedust): Open source Python package, providing support for Javascript/Node.js code.
 
 ## Steps
